@@ -14,7 +14,6 @@ const SidebarItem = ({ href, icon: Icon, label, isActive: manualIsActive }) => {
           : 'text-gray-900 hover:bg-gray-50/60 hover:text-gray-950 font-semibold'
       } ${href ? 'cursor-pointer' : 'cursor-default'}`}
     >
-      {/* Icon rendered directly on the row, no circular background container */}
       <Icon className={`h-[18px] w-[18px] shrink-0 ${isActive ? 'text-[#225e57]' : 'text-gray-800'}`} />
       <span className="text-[14px] tracking-tight">{label}</span>
     </div>

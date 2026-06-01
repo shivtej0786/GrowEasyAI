@@ -51,21 +51,18 @@ const LeadRow = ({ lead, onSetFollowUp }) => {
         </span>
       </td>
 
-      {/* 8. LEAD OWNER - Semi-rounded rectangular badge (rounded-[8px]) */}
       <td className="p-4 text-sm">
         <span className="inline-flex items-center gap-1.5 rounded-[8px] border border-gray-200/50 bg-[#f9fafb] px-3 py-1.5 text-xs font-bold text-gray-600 shadow-sm">
           {lead.owner} <span className="text-[11px] text-gray-400 font-normal">✎</span>
         </span>
       </td>
 
-      {/* 9. SOURCE - Fully rounded capsule pill (rounded-full) */}
       <td className="p-4 text-sm">
         <span className="inline-flex items-center rounded-full bg-[#f3f4f6]/80 px-4 py-1.5 text-xs font-bold text-gray-600">
           {lead.source}
         </span>
       </td>
 
-      {/* 10. NEXT FOLLOW UP - Semi-rounded rectangular button (rounded-[8px]) */}
       <td className="p-4 text-sm">
         <button 
           onClick={(e) => {
@@ -78,7 +75,6 @@ const LeadRow = ({ lead, onSetFollowUp }) => {
         </button>
       </td>
 
-      {/* 11. CALL STATUS TODAY - Rounded-[10px] styled buttons/badges */}
       <td className="p-4 text-sm">
         {lead.call_status_today === 'Done' ? (
           <span className="inline-flex items-center gap-1.5 rounded-[10px] bg-[#e1f2f1]/50 px-4 py-1.5 text-xs font-bold text-[#225e57] border border-[#225e57]/10 shadow-sm">

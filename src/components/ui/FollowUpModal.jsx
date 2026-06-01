@@ -7,7 +7,6 @@ const FollowUpModal = ({ open, onClose, leadName, onSave }) => {
 
   useEffect(() => {
     if (open) {
-      // default to current datetime in local "yyyy-MM-ddTHH:mm" format
       const now = new Date();
       const pad = (n) => String(n).padStart(2, "0");
       const val = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}T${pad(now.getHours())}:${pad(now.getMinutes())}`;
@@ -19,13 +18,13 @@ const FollowUpModal = ({ open, onClose, leadName, onSave }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
+   
       <div className="absolute inset-0 bg-black/40 transition-opacity" onClick={onClose} />
       
-      {/* Modal Content - exact visual parity with screenshot */}
+    
       <div className="relative z-10 w-full max-w-[440px] rounded-[32px] bg-white p-8 shadow-2xl transition-all select-none">
         
-        {/* Header Block */}
+    
         <div className="flex items-start justify-between">
           <h3 className="text-[22px] font-black text-gray-900 tracking-tight leading-none">Set Next Follow Up</h3>
           <button 
@@ -36,12 +35,12 @@ const FollowUpModal = ({ open, onClose, leadName, onSave }) => {
           </button>
         </div>
 
-        {/* Subtitle Block */}
+   
         <p className="text-[15px] text-gray-400 font-medium mt-3">
           for <span className="text-gray-950 font-extrabold ml-1">{leadName}</span>
         </p>
 
-        {/* Input Block */}
+     
         <div className="mt-6">
           <label className="block text-[13px] font-bold text-gray-400 tracking-wide uppercase">Follow Up Date & Time</label>
           <input
@@ -52,7 +51,6 @@ const FollowUpModal = ({ open, onClose, leadName, onSave }) => {
           />
         </div>
 
-        {/* Actions Row - exact matching buttons styling (stretched, rounded-[16px]) */}
         <div className="flex items-center gap-4 mt-8">
           <button 
             onClick={onClose} 

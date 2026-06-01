@@ -17,12 +17,11 @@ import {
 
 const PerformanceCard = ({ title, value, icon: Icon }) => (
   <div className="flex-1 min-w-[220px] rounded-[24px] border border-gray-100 bg-gradient-to-br from-white via-white to-[#e1f2f1]/35 p-6 shadow-sm flex flex-col justify-between select-none">
-    {/* Top Row: Title & Bare Icon */}
+  
     <div className="flex justify-between items-start">
       <span className="text-[15px] font-bold text-gray-500">{title}</span>
       <Icon className="h-6 w-6 text-gray-400 stroke-[1.8]" />
     </div>
-    {/* Bottom Row: Big Bold Value */}
     <div className="mt-5">
       <span className="text-[38px] font-black text-gray-900 leading-none">{value}</span>
     </div>
@@ -35,9 +34,7 @@ const LeadsDashboard = () => {
 
   return (
     <div className="space-y-6">
-      {/* Filters Panel - Styled exactly like Screenshot 2 */}
       <div className="space-y-4">
-        {/* Row 1: Dropdown triggers */}
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-3">
             <button className="flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-full bg-white text-xs font-bold text-gray-700 hover:bg-gray-50 transition shadow-sm">
@@ -58,11 +55,9 @@ const LeadsDashboard = () => {
           </button>
         </div>
 
-        {/* Row 2: Date Pickers and ranges */}
         <div className="space-y-2">
           <p className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Created Date Range</p>
           <div className="flex flex-wrap items-center gap-3">
-            {/* Active Date Picker Pill */}
             <div className="flex items-center gap-2.5 px-4 py-2 border border-emerald-200 bg-[#e1f2f1]/30 rounded-full text-xs font-bold text-[#225e57] shadow-sm">
               <FiCalendar className="text-[#225e57] h-3.5 w-3.5" />
               <span>19 Apr 2026 - 18 May 2026</span>
@@ -115,7 +110,6 @@ const LeadsDashboard = () => {
         <LeadDetailsDrawer onSetFollowUp={setFollowUpLead} />
       </div>
 
-      {/* Global Viewport-level Follow Up Modal - covers full screen perfectly */}
       {followUpLead && (
         <FollowUpModal
           open={!!followUpLead}

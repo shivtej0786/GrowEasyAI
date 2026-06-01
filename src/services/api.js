@@ -22,7 +22,6 @@ export const getOrganizations = () => {
   return useMockFallback(() => axios.get('/users/organisations'), { data: mockOrganizationsResponse });
 };
 
-// opts can include query params like limit, created_from, created_to, status
 export const getLeads = (opts = {}) => {
   return useMockFallback(
     () => axios.get('/org/leads', { params: opts }),

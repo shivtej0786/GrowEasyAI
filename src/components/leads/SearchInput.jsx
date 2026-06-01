@@ -7,8 +7,7 @@ const SearchInput = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const debouncedSearchTerm = useDebounce(searchTerm, 500);
     
-    // In a real app, you'd dispatch an action with the debounced search term
-    // For this example, we'll just log it.
+
     useEffect(() => {
         if (debouncedSearchTerm) {
             // dispatch(searchLeads(debouncedSearchTerm));

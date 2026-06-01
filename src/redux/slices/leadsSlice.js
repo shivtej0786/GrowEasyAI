@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getLeads } from '../../services/api';
 
-// opts can include query params forwarded to the API
 export const fetchLeads = createAsyncThunk('leads/fetchLeads', async (opts = {}) => {
   const response = await getLeads(opts);
   return response.data;

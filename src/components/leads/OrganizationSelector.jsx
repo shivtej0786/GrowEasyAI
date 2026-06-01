@@ -29,7 +29,6 @@ const OrganizationSelector = () => {
     setIsOpen(false);
   };
 
-  // Pure CSS high-fidelity geometric branding icons matching screenshots
   const renderOrgIcon = (name) => {
     const normName = name.toLowerCase();
     
@@ -58,7 +57,7 @@ const OrganizationSelector = () => {
     if (normName.includes('vk test')) {
       return (
         <div className="relative h-10 w-10 shrink-0 rounded-[14px] bg-gradient-to-br from-[#10b981] to-[#047857] overflow-hidden flex items-center justify-center shadow-sm">
-          {/* Inner blue rounded square with orange border */}
+       
           <div className="h-5 w-5 rounded bg-sky-900/90 border border-orange-400 flex items-center justify-center">
             <div className="h-2 w-2 rounded bg-cyan-400"></div>
           </div>
@@ -69,15 +68,14 @@ const OrganizationSelector = () => {
     if (normName.includes('sales ai') || normName.includes('sales')) {
       return (
         <div className="relative h-10 w-10 shrink-0 rounded-[14px] bg-[#225e57] overflow-hidden flex items-center justify-center shadow-sm">
-          {/* Orange semi-circle */}
+     
           <div className="absolute left-0 top-0 h-6 w-6 rounded-full bg-orange-400 transform -translate-x-1 -translate-y-1"></div>
-          {/* Cyan ring */}
+      
           <div className="h-4 w-4 rounded-full border-2 border-cyan-300"></div>
         </div>
       );
     }
     
-    // Default fallback
     return (
       <div className="h-10 w-10 shrink-0 rounded-[14px] bg-gradient-to-tr from-orange-400 to-amber-500 overflow-hidden shadow-sm flex items-center justify-center text-white font-black text-sm">
         {name.charAt(0)}
@@ -94,7 +92,6 @@ const OrganizationSelector = () => {
       )}
       {status === 'succeeded' && selectedOrg && (
         <>
-          {/* Dropdown Trigger Button - Styled exactly like screenshot */}
           <button 
             onClick={toggleDropdown} 
             className="w-full flex items-center justify-between rounded-[18px] bg-[#e1f2f1]/30 border border-[#225e57] px-3.5 py-3 text-left shadow-sm transition hover:bg-[#e1f2f1]/50"
@@ -111,7 +108,6 @@ const OrganizationSelector = () => {
             <FiChevronDown className={`transition-transform text-[#225e57] h-4 w-4 ${isOpen ? 'rotate-180' : ''}`} />
           </button>
 
-          {/* Dropdown List Container - Styled exactly like screenshot */}
           {isOpen && (
             <div className="absolute left-0 z-30 mt-2.5 w-full rounded-[24px] border border-gray-100 bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden">
               <ul className="py-2 flex flex-col bg-white">

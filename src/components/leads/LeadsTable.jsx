@@ -31,7 +31,6 @@ const LeadsTable = ({ onSetFollowUp }) => {
 
   return (
     <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
-      {/* Title & Search Panel - exact styling from screenshot */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
         <h2 className="text-[17px] font-extrabold text-gray-900">Your Leads</h2>
         <div className="flex items-center gap-3 w-full sm:w-auto">
